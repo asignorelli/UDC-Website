@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../images/UDC.png">
+  <meta charset="UTF-8">
+  <title>Erin Cardin | UDC</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="profile-page mobile-special">
+
+  <!-- 🔙 Nav or Home Link -->
+<nav class="navbar">
+  <ul class="nav-full">
+    <div class="nav-left">
+      <li><a href="../athletes.html">ATHLETES</a></li>
+      <li><a href="../rankings.html">RANKINGS</a></li>
+    </div>
+
+    <li class="logo"><a href="../index.html">UDC</a></li>
+
+    <div class="nav-right">
+      <li><a href="../awards.html">AWARDS</a></li>
+      <li><a href="../events.html">EVENTS</a></li>
+    </div>
+  </ul>
+</nav>
+
+  <!-- 🔥 Fighter Profile Section -->
+  <main class="fighter-profile">
+    <div class="fighter-img">
+  <div class="profile-img-wrapper">
+    <img src="../images/emptySide.png" alt="Erin">
+  </div>
+</div>
+
+    <div class="fighter-info">
+
+  <div class="tags">
+    <span class="tag">#7 Rank</span>
+    <span class="tag active">Inactive</span>
+  </div>
+
+  <h1 class="fighter-name">ERIN CARDIN</h1>
+
+  <p class="fighter-subtitle">Alternate Roster</p>
+  <p class="fighter-record">0 wins - <span class="record-label">0 defenses</span></p>
+
+  <div class="fighter-stats">
+    <div class="stat-box"><h2>2</h2><p>EVENTS ATTENDED</p></div>
+    <div class="stat-box"><h2>1</h2><p>TOOTH BRUSHES LOST</p></div>
+  </div>
+
+</div>
+
+  </main>
+ <!-- 📝 Fight Record Section -->
+<section class="record-container">
+
+    <!-- Fight Info -->
+    <section class="fight-record">
+  <h2 class="big-title">PLAYER RECORD</h2>
+  <div class="record-row scroll-fade">
+    <a href="peyton.html"><img src="../images/peytonSmallWIN.png" alt="Fighter 1" class="record-fighter"></a>
+    <a href="erin.html"><img src="../images/emptyPic.png" alt="Fighter 1" class="record-fighter"></a>
+    <div class="record-details">
+      <h3><a class="event-link" href="../events/udc4.html">UDC 4</a></h3>
+      <p class="record-date">May 17, 2025</p>
+      <div class="record-meta">
+        <p><strong>Placement</strong><br><span class="win-method">7</span></p>
+        <p><strong>Method</strong><br><span class="win-method">SUBMISSION</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="record-row scroll-fade">
+    <a href="meat.html"><img src="../images/meatbossSmallWIN.png" alt="Fighter 1" class="record-fighter"></a>
+    <a href="erin.html"><img src="../images/emptyPic.png" alt="Fighter 1" class="record-fighter"></a>
+    <div class="record-details">
+       <h3><a class="event-link" href="../events/udc1.html">UDC 1</a></h3>
+      <p class="record-date">Oct. 12, 2024</p>
+      <div class="record-meta">
+        <p><strong>Placement</strong><br><span class="win-method">5</span></p>
+        <p><strong>Method</strong><br><span class="win-method">SUBMISSION</span></p>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+</section>
+
+<script>
+  const fadeIns = document.querySelectorAll('.scroll-fade');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target); // only fade in once
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  fadeIns.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
